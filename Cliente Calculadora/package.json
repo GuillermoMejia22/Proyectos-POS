@@ -1,0 +1,9 @@
+{
+  "name": "test-package",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "Cliente2.js",
+  "dependencies": {
+    "soap": "^1.0.0"
+  }
+}
