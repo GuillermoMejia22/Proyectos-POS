@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <h1>Formulario de Alumnos</h1>
+    <form action="/alumnos" method="post">
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" placeholder="Nombre">
+        <label for="genero">Genero:</label>
+        <input type="text" name="genero" placeholder="Genero">
+        <label for="edad">Edad:</label>
+        <input type="number" name="edad" placeholder="Edad">
+        <label for="estatura">Estatura:</label>
+        <input type="number" step="0.01" name="estatura" placeholder="Estatura">
+        <label for="peso">Peso:</label>
+        <input type="number" step="0.1"name="peso" placeholder="Peso">
+        <label for="matricula">Matricula:</label>
+        <input type="text" name="matricula" placeholder="Matricula">
+        <label for="carrera">Carrera:</label>
+        <input type="text" name="carrera" placeholder="Carrera">
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+<script src="/main.js"></script>

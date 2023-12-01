@@ -1,0 +1,16 @@
+{
+  "name": "ejercicio-soap",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "node main.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "soap": "^1.0.0"
+  }
+}
