@@ -55,4 +55,18 @@ app.post('/nuevoUsuario', function (req, res)
     });
 });
 
+app.delete('/eliminaUsuario', function (req, res) {
+    readFile(archivo, 'utf8', function (err, data) {
+        var userId = req.body.id;
+        console.log(userId);
+        data = JSON.parse(data);
+        data = data.filter(elUsuario => elUsuario.id != userId);
+        writeFile(archivo, JSON.stringify(data), function writeJSON(err) {
+            if (err) return console.log(err);
+        });
+        res.json(data)
+    })
+    console.log("Usuario Eliminado Con Exito");
+})
+
 app.listen(port, () => console.log("Servidor en espera de peticiones"));

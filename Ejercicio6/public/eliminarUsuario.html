@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eliminar Usuario</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+    <h1>Eliminar Usuario</h1>
+    <form>
+        <label for="idUsuario">Id</label>
+        <input type="text" name="idUsuario" id="idUsuario">
+        <button type="button" onclick="eliminarUsuario()">Enviar</button>
+    </form>
+</body>
+
+<script>
+    async function eliminarUsuario() {
+        let idUsuario = document.getElementById("idUsuario").value
+        let resultado = await fetch("/eliminaUsuario", {
+            body: JSON.stringify({ id: idUsuario }),
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            method: "delete"
+        })
+        let data = await resultado.json()
+        console.log(data);
+    }
+</script>
+
+</html>

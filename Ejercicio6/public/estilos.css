@@ -38,6 +38,25 @@ button[type="submit"]:hover {
     border: solid 1px #000;
 }
 
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    width: 100%;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #a7c957;
+    border: solid 1px #000;
+}
+
 input {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 15px;
