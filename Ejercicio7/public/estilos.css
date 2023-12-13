@@ -1,0 +1,78 @@
+h1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #386641;
+    padding: 0.5%;
+    text-align: center;
+}
+
+form {
+    width: 25%;
+    padding: 20px;
+    border: 1px solid #005c00;
+    border-radius: 5px;
+    margin: 20px auto;
+}
+
+label {
+    font-size: 20px;
+    display: block;
+    width: 100%;
+}
+
+button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    width: 100%;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #a7c957;
+    border: solid 1px #000;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    width: 100%;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #a7c957;
+    border: solid 1px #000;
+}
+
+input {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+    margin-bottom: 20px;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+}
+
+input:hover {
+    background-color: #c7f9cc;
+    border: 1px solid #226f54;
+}
+
+input:focus {
+    border: 1px solid;
+    background-color: #c7f9cc;
+}

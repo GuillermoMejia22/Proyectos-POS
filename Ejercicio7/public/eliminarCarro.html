@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eliminar Carro</title>
+</head>
+<body>
+    <h1>Eliminar Carro</h1>
+    <form>
+        <label for="matricula">Matricula</label>
+        <input type="text" name="matricula" id="matricula">
+        <link rel="stylesheet" href="estilos.css">
+        <button type="button" onclick="eliminarCarro()">Enviar</button>
+    </form>
+</body>
+<script>
+    async function eliminarCarro() {
+        let matricula = document.getElementById("matricula").value
+        let resultado = await fetch("/eliminaCarro", {
+            body: JSON.stringify({ matricula: matricula }),
+            headers: { 'Content-Type': 'application/json' },
+            method: "delete"
+        })
+        let data = await resultado.json()
+        console.log(data);
+    }
+</script>
+</html>
