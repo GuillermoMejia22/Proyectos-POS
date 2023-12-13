@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+    <h1>Formulario</h1>
+     <form id="Formulario">
+        <label for="id">Id</label>
+        <input type="text" name="id">
+        <button type="button" onclick="eliminarUsuario()">Enviar</button>
+    </form>
+</body>
+
+<script>
+    async function eliminarUsuario(){
+        const formulario = document.getElementById("Formulario")
+        const resultado = await fetch( "/eliminaUsuario" , {
+            body : new URLSearchParams(new FormData( formulario )),
+            method : "delete"
+        })
+        window.location.href = "/listaUsuarios"
+    }
+</script>
+
+</html>
