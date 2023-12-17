@@ -1,0 +1,80 @@
+body {
+    font-family: 'Afacad', sans-serif;
+}
+
+h1 {
+    color: #d90429;
+    padding: 0.5%;
+    text-align: center;
+}
+
+form {
+    width: 25%;
+    padding: 20px;
+    border: 1px solid #d90429;
+    border-radius: 5px;
+    margin: 20px auto;
+}
+
+label {
+    font-size: 20px;
+    display: block;
+    width: 100%;
+}
+
+button[type="submit"] {
+    background-color: #c9184a;
+    color: white;
+    border: none;
+    width: 100%;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #370617;
+    border: solid 1px #000;
+}
+
+button {
+    background-color: #c9184a;
+    color: white;
+    border: none;
+    width: 100%;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #370617;
+    border: solid 1px #000;
+}
+
+input {
+    font-size: 15px;
+    margin-bottom: 20px;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #c65b7c;
+}
+
+input:hover {
+    background-color: #f8ad9d;
+    border: 1px solid #540b0e;
+}
+
+input:focus {
+    border: 1px solid;
+    background-color: #f8ad9d;
+}

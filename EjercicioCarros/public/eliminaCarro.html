@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Afacad&display=swap" rel="stylesheet">
+    <title>Formulario para Eliminar Carro</title>
+</head>
+<body>
+    <h1>Formulario para Eliminar Carro</h1>
+     <form id="Formulario">
+        <label for="matricula">Matricula</label><input type="text" name="matricula">
+        <button type="button" onclick="eliminarCarro()">Enviar</button>
+    </form>
+</body>
+<script>
+    async function eliminarCarro(){
+        const formulario = document.getElementById("Formulario")
+        const resultado = await fetch( "/eliminaCarro" , {
+            body : new URLSearchParams(new FormData( formulario )),
+            method : "delete"
+        })
+        window.location.href = "/listaCarros"
+    }
+</script>
+</html>
