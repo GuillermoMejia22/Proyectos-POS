@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Afacad&display=swap" rel="stylesheet">
+    <title>Nuevo Cliente</title>
+</head>
+<body>
+    <h1>Nuevo Cliente</h1>
+    <form action="/agregarCliente" method="post" onsubmit="return validarFormulario()">
+        <label for="nombre">Nombre</label><input type="text" name="nombre" id="nombre" placeholder="Juanito">
+        <label for="apellidos">Apellidos</label><input type="text" name="apellidos" id="apellidos" placeholder="Perez Gonzalez">
+        <label for="direccion">Direccion</label><input type="text" name="direccion" id="direccion" placeholder="Insurgentes Sur 1">
+        <label for="correo">Correo</label><input type="text" name="correo" id="correo" placeholder="juanito@dominio.com">
+        <label for="telefono">Teléfono</label><input type="text" name="telefono" id="telefono" placeholder="telefono">
+        <button type="submit">Agregar</button>
+    </form>
+</body>
+<script src="scriptsAdicionales.js"></script>
+</html>

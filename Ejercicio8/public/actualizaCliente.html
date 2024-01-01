@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Afacad&display=swap" rel="stylesheet">
+    <title>Actualiza Cliente</title>
+</head>
+<body>
+    <h1>Actualiza Cliente</h1>
+    <form id="FormularioActualizar">
+        <label class="instrucciones">Llena SOLO los campos que deseas actualizar</label>
+        <label for="id">ID</label><input type="number" name="id" id="id" placeholder="ID del Cliente a Actualizar">
+        <label for="nombre">Nombre</label><input type="text" name="nombre" id="nombre" placeholder="Nuevo Nombre">
+        <label for="apellidos">Apellidos</label><input type="text" name="apellidos" id="apellidos" placeholder="Nuevos Apellidos">
+        <label for="direccion">Direccion</label><input type="text" name="direccion" id="direccion" placeholder="Nueva Dirección">
+        <label for="correo">Correo</label><input type="text" name="correo" id="correo" placeholder="Nuevo Correo">
+        <label for="telefono">Teléfono</label><input type="text" name="telefono" id="telefono" placeholder="Nuevo Teléfono">
+        <button type="button" onclick="actualizarCliente()">Actualizar</button>
+    </form>
+</body>
+<script src="scriptsAdicionales.js"></script>
+</html>
