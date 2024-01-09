@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Afacad&display=swap" rel="stylesheet">
+    <title>Nuevo Auto</title>
+</head>
+<body>
+    <h1>Nuevo Auto</h1>
+    <form action="/agregaAuto" method="post" onsubmit="return validarFormulario()">
+        <label for="id">ID</label><input type="text" name="id" id="nombre" placeholder="abc-012">
+        <label for="marca">Marca</label><input type="text" name="marca" id="marca" placeholder="Tesla">
+        <label for="modelo">Modelo</label><input type="text" name="modelo" id="modelo" placeholder="Tesla X">
+        <button type="submit">Agregar</button>
+    </form>
+</body>
+</html>

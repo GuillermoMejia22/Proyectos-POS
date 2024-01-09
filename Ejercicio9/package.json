@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "express": "^4.18.2",
+    "mysql2": "^3.7.0"
+  },
+  "name": "ejercicio9",
+  "version": "1.0.0",
+  "description": "CRUD con Autos",
+  "main": "src/main.js",
+  "type": "module",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Guillermo Mejia",
+  "license": "ISC"
+}
