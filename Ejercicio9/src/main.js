@@ -46,6 +46,7 @@ async function obtenerDatos() {
         var con = createConnection(
             {
                 host: "localhost",
+                port: "3307",
                 user: "root",
                 password: "root",
                 database: "automoviles"
@@ -76,6 +77,7 @@ async function nuevoAutomovil(nuevosDatos) {
         var con = createConnection(
             {
                 host: "localhost",
+                port: "3307",
                 user: "root",
                 password: "root",
                 database: "automoviles" // Nombre de la Base de datos
@@ -103,6 +105,7 @@ async function eliminaAuto(idCliente) {
         var con = createConnection(
             {
                 host: "localhost",
+                port: "3307",
                 user: "root",
                 password: "root",
                 database: "automoviles" // Nombre de la Base de datos
