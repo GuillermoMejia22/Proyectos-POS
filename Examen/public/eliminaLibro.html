@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Afacad&display=swap" rel="stylesheet">
+    <title>Formulario para Eliminar Libro</title>
+</head>
+
+<body>
+    <h1>Formulario para Eliminar Libro</h1>
+    <form id="Formulario">
+        <label for="isbn">ISBN</label><input type="text" name="isbn">
+        <button type="button" onclick="eliminarLibro()">Eliminar Libro</button>
+    </form>
+</body>
+<script>
+    async function eliminarLibro() {
+        const formulario = document.getElementById("Formulario")
+        const id = formulario.querySelector('[name="isbn"]').value;
+        if (id.trim() === '') {
+            alert('Por favor, complete el campo ISBN');
+        } else {
+            const resultado = await fetch("/eliminaLibro", {
+                body: new URLSearchParams(new FormData(formulario)),
+                method: "delete"
+            })
+            window.location.href = "/listaLibros"
+        }
+    }
+</script>
+</html>
