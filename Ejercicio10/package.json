@@ -1,12 +1,12 @@
 {
-  "dependencies": {
-    "graphql": "^16.8.1"
-  },
   "name": "ejercicio10",
   "version": "1.0.0",
   "description": "Primer Ejercicio de GraphQL",
-  "main": "ConsultaGraphql.js",
+  "main": "Academico.js",
   "type": "module",
+  "dependencies": {
+    "graphql": "^16.8.1"
+  },
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

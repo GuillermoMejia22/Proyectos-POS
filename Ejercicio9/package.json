@@ -8,7 +8,6 @@
   "description": "CRUD con Autos",
   "main": "src/main.js",
   "type": "module",
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
