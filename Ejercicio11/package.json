@@ -6,7 +6,7 @@
   },
   "name": "ejercicio11",
   "version": "1.0.0",
-  "description": "Ejercicio 2 de Graphql",
+  "description": "Segundo ejemplo de GraphQL",
   "main": "src/Principal.js",
   "type": "module",
   "devDependencies": {},

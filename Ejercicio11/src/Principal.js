@@ -21,6 +21,8 @@ var schema = buildSchema(`
     suma(a: Int, b: Int): Int
     getIMC: Float
     getTasaMetabolica: Float
+    getEstadoSalud: String 
+    getRecomendacion: String 
   }
 
   type Query {
@@ -55,39 +57,56 @@ class Alumno {
         return this.estatura
     }
 
-    getPeso(){
+    getPeso() {
         return this.peso
     }
 
-    getGenero(){
+    getGenero() {
         return this.genero
     }
 
-    suma({ a, b }){
+    suma({ a, b }) {
         return a + b
     }
 
-    getIMC(){
+    getIMC() {
         return this.peso / (this.estatura * this.estatura)
     }
 
-    getTasaMetabolica(){
+    getTasaMetabolica() {
         let tmb = (10 * this.peso) + (6.25 * (this.estatura * 100)) - (5 * this.edad)
-        if(this.genero == "Masculino"){
+        if (this.genero == "Masculino") {
             return tmb + 5
         } else {
             return tmb - 161
         }
     }
 
-    /*
-    getEstadoSalud(){
-       
+    getEstadoSalud() {
+        let imc = this.getIMC();
+        let estado = "Obesidad";
+        if(imc < 18.5){
+            estado = "Peso inferior al normal";
+        } else if(imc >= 18.5 && imc <= 24.9){
+            estado = "Normal";
+        } else if(imc >= 25 && imc <= 29.9){
+            estado = "Peso superior al normal";
+        }
+        return estado;
     }
 
     getRecomendacion(){
-
-    }*/
+        let estado = this.getEstadoSalud();
+        let recomendacion = "Debido a que tu peso es muy bajo deberías tratar comer más y hacer ejercicio, la cantidad de calorías que deberías consumir son: " + this.getTasaMetabolica();
+        if(estado == "Obesidad"){
+            recomendacion = "Debido a que tu estado de salud no es muy favorable, se recomienda que lleves una dieta balanceada acompañada de horas de ejercicio, la cantidad de calorías que deberías consumir son: " + this.getTasaMetabolica();
+        } else if(estado == "Peso superior al normal"){
+            recomendacion = "Debido a que te encuentras un poco pasado de kilos, se recomienda que hagas un poco mas de ejercicio y acompañes eso con una buena alimentación, la cantidad de calorías que deberías consumir son: " + this.getTasaMetabolica();
+        } else if(estado == "Normal"){
+            recomendacion = "Excelente, sigue asi, recuerda alimentarte sanamente y tambien hacer ejercicio, la cantidad de calorías que deberías consumir son: " + this.getTasaMetabolica();
+        }
+        return recomendacion;
+    }
 
 }
 
