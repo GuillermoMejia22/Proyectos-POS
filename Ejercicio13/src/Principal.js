@@ -27,7 +27,7 @@ class DadoAleatorio {
     tirar({numTiradas}){
         let salida = []
         for(let i = 0; i < numTiradas; i++){
-            salida.push(tirarUna())
+            salida.push(this.tirarUna())
         }
         return salida
     }
