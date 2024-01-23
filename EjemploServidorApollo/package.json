@@ -1,0 +1,18 @@
+{
+  "dependencies": {
+    "@apollo/server": "^4.10.0",
+    "graphql": "^16.8.1"
+  },
+  "name": "ejemploservidorapollo",
+  "version": "1.0.0",
+  "description": "Ejemplo con Servidor Apollo",
+  "main": "index.js",
+  "type": "module",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "Guillermo Mejia",
+  "license": "ISC"
+}
