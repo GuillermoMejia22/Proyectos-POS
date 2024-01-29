@@ -12,7 +12,7 @@ const schema = gql`
 
     type Query {
         listaUsuarios: [Usuario]!
-        usuario(id: ID!): Usuario
+        usuario(id: ID!): Usuario!
     }
 
     type Mutation {
@@ -44,7 +44,7 @@ const resolvers = {
             return Object.values(data.usuarios);
         },
         usuario:(parent, { id }) => {
-            return data.usuarios.filter(u => u.id === id);
+            return data.usuarios.find(u => u.id === id);
         },
     },
     Mutation: {
