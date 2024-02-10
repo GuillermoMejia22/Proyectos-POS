@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "@apollo/server": "^4.10.0",
+    "mysql2": "^3.9.1"
+  },
+  "name": "proyectofinal",
+  "version": "1.0.0",
+  "description": "Proyecto final del curso de Programacion Orientada a Servicios",
+  "main": "src/main.js",
+  "type": "module",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Guillermo Mejia",
+  "license": "ISC"
+}
